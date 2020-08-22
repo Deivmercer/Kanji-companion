@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Kanji companion",
+	"author": "Davide Costantini",
+	"description": "Kanji companion",
+	"version": "0.1",
+	"background": {
+		"persistent": false,
+		"scripts": ["background_script.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["jquery-ui.min.css"],
+			"js": [ "jquery-3.5.1.min.js", "jquery-ui.min.js", "content_script.js" ]
+		}
+	],
+	"permissions": ["https://jisho.org/*", "contextMenus", "tabs", "activeTab"]
+}
